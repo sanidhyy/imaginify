@@ -52,7 +52,7 @@ export const TransformationForm = ({
   const [image, setImage] = useState(data);
   const [newTransformation, setNewTransformation] =
     useState<Transformations | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(true);
   const [isTransforming, setIsTransforming] = useState(false);
   const [transformationConfig, setTransformationConfig] = useState(config);
 
@@ -98,7 +98,14 @@ export const TransformationForm = ({
           name="title"
           formLabel="Image Title"
           className="w-full"
-          render={({ field }) => <Input {...field} className="input-field" />}
+          render={({ field }) => (
+            <Input
+              {...field}
+              className="input-field"
+              disabled={isSubmitting || isTransforming}
+              aria-disabled={isSubmitting || isTransforming}
+            />
+          )}
         />
 
         {type === "fill" && (
@@ -109,9 +116,12 @@ export const TransformationForm = ({
             className="w-full"
             render={({ field }) => (
               <Select
+                {...field}
                 onValueChange={(value) =>
                   onSelectFieldHandler(value, field.onChange)
                 }
+                disabled={isSubmitting || isTransforming}
+                aria-disabled={isSubmitting || isTransforming}
               >
                 <SelectTrigger className="select-field">
                   <SelectValue placeholder="Select size" />
@@ -139,6 +149,7 @@ export const TransformationForm = ({
               className="w-full"
               render={({ field }) => (
                 <Input
+                  {...field}
                   value={field.value}
                   className="input-field"
                   onChange={(e) =>
@@ -149,6 +160,8 @@ export const TransformationForm = ({
                       field.onChange
                     )
                   }
+                  disabled={isSubmitting || isTransforming}
+                  aria-disabled={isSubmitting || isTransforming}
                 />
               )}
             />
@@ -161,6 +174,7 @@ export const TransformationForm = ({
                 className="w-full"
                 render={({ field }) => (
                   <Input
+                    {...field}
                     value={field.value}
                     className="input-field"
                     onChange={(e) =>
@@ -171,6 +185,8 @@ export const TransformationForm = ({
                         field.onChange
                       )
                     }
+                    disabled={isSubmitting || isTransforming}
+                    aria-disabled={isSubmitting || isTransforming}
                   />
                 )}
               />
