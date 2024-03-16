@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/select";
 import {
   aspectRatioOptions,
+  creditFee,
   defaultValues,
   transformationTypes,
 } from "@/constants";
@@ -28,6 +29,7 @@ import { debounce, type AspectRatioKey, deepMergeObjects } from "@/lib/utils";
 import type { IImage } from "@/models/image.model";
 
 import { CustomField } from "./custom-field";
+import { InsufficientCreditsModal } from "./insufficient-credits-modal";
 import { MediaUploader } from "./media-uploader";
 import { TransformedImage } from "./transformed-image";
 
@@ -175,7 +177,6 @@ export const TransformationForm = ({
     }, 1000);
   };
 
-  // TODO: Update Credit Fee dynamically
   const onTransformHandler = async () => {
     setIsTransforming(true);
 
@@ -186,13 +187,14 @@ export const TransformationForm = ({
     setNewTransformation(null);
 
     startTransition(async () => {
-      await updateCredits(userId, -1);
+      await updateCredits(userId, creditFee);
     });
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
         <CustomField
           control={form.control}
           name="title"
