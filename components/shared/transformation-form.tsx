@@ -25,6 +25,7 @@ import type { IImage } from "@/models/image.model";
 
 import { CustomField } from "./custom-field";
 import { MediaUploader } from "./media-uploader";
+import { TransformedImage } from "./transformed-image";
 
 export const formSchema = z.object({
   title: z.string(),
@@ -241,6 +242,15 @@ export const TransformationForm = ({
                 type={type}
               />
             )}
+          />
+
+          <TransformedImage
+            image={image}
+            type={type}
+            title={form.getValues().title}
+            isTransforming={isTransforming}
+            setIsTransforming={setIsTransforming}
+            transformationConfig={transformationConfig}
           />
         </div>
 
