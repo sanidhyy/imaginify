@@ -26,6 +26,7 @@ import type { IImage } from "@/models/image.model";
 import { CustomField } from "./custom-field";
 import { MediaUploader } from "./media-uploader";
 import { TransformedImage } from "./transformed-image";
+import { updateCredits } from "@/actions/user.action";
 
 export const formSchema = z.object({
   title: z.string(),
@@ -109,7 +110,7 @@ export const TransformationForm = ({
     }, 1000);
   };
 
-  // TODO: Return to update Credits
+  // TODO: Update Credit Fee dynamically
   const onTransformHandler = async () => {
     setIsTransforming(true);
 
@@ -120,7 +121,7 @@ export const TransformationForm = ({
     setNewTransformation(null);
 
     startTransition(async () => {
-      // await updateCredits(userId, creditFee)
+      await updateCredits(userId, -1);
     });
   };
 
