@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { links } from "@/config";
 import { navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 
@@ -64,6 +65,16 @@ export const MobileNav = () => {
                       </li>
                     );
                   })}
+
+                  <li className="p-18 flex whitespace-nowrap text-dark-700">
+                    <Link
+                      href={links.sourceCode}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Source Code
+                    </Link>
+                  </li>
                 </ul>
               </>
             </SheetContent>
@@ -71,9 +82,24 @@ export const MobileNav = () => {
         </SignedIn>
 
         <SignedOut>
-          <Button asChild className="button bg-purple-gradient bg-cover">
-            <Link href="/sign-in">Sign in</Link>
-          </Button>
+          <div className="flex-center gap-x-2">
+            <Button asChild className="button bg-purple-gradient bg-cover">
+              <Link href="/sign-in">Sign in</Link>
+            </Button>
+
+            <Link
+              href={links.sourceCode}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Image
+                src="/assets/icons/github.svg"
+                alt="Github"
+                width={28}
+                height={28}
+              />
+            </Link>
+          </div>
         </SignedOut>
       </nav>
     </header>
