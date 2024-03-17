@@ -1,3 +1,5 @@
+"use client";
+
 import { CldImage } from "next-cloudinary";
 import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
@@ -23,7 +25,7 @@ export const TransformedImage = ({
         {hasDownload && (
           <button className="download-btn" onClick={downloadHandler}>
             <Image
-              src="/assets/icon/download.svg"
+              src="/assets/icons/download.svg"
               alt="Download"
               width={24}
               height={24}
