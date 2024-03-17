@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { links } from "@/config";
 import { navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 
@@ -83,8 +84,26 @@ export const Sidebar = () => {
                   </li>
                 );
               })}
-              <li className="flex-center cursor-pointer gap-2 p-4">
+
+              <li className="flex-center cursor-pointer p-3">
                 <UserButton afterSignOutUrl="/sign-in" showName />
+              </li>
+
+              <li className="sidebar-nav_element group text-gray-700">
+                <Link
+                  className="sidebar-link"
+                  href={links.sourceCode}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Image
+                    src="/assets/icons/github.svg"
+                    alt="Github"
+                    width={24}
+                    height={24}
+                  />
+                  Source Code
+                </Link>
               </li>
             </ul>
           </SignedIn>
@@ -92,6 +111,27 @@ export const Sidebar = () => {
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover">
               <Link href="/sign-in">Sign in</Link>
+            </Button>
+
+            <Button
+              className="sidebar-nav_element group bg-purple-gradient text-white"
+              asChild
+            >
+              <Link
+                className="gap-x-2"
+                href={links.sourceCode}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Image
+                  src="/assets/icons/github.svg"
+                  alt="Github"
+                  width={24}
+                  height={24}
+                  className="brightness-200"
+                />
+                Source Code
+              </Link>
             </Button>
           </SignedOut>
         </nav>
