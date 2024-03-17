@@ -14,6 +14,14 @@ declare global {
       NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: string;
       CLOUDINARY_API_KEY: string;
       CLOUDINARY_API_SECRET: string;
+
+      // stripe keys
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: string;
+      STRIPE_SECRET_KEY: string;
+      STRIPE_WEBHOOK_SECRET: string;
+
+      // public server url
+      NEXT_PUBLIC_SERVER_URL: string;
     }
   }
 }
