@@ -228,6 +228,7 @@ export const TransformationForm = ({
                 onValueChange={(value) =>
                   onSelectFieldHandler(value, field.onChange)
                 }
+                value={field.value}
                 disabled={isSubmitting || isTransforming}
                 aria-disabled={isSubmitting || isTransforming}
               >
