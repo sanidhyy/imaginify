@@ -1,5 +1,6 @@
 import { SignedIn, auth } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { getUserById } from "@/actions/user.action";
@@ -56,8 +57,8 @@ const Credits = async () => {
               </ul>
 
               {plan.name === "Free" ? (
-                <Button variant="outline" className="credits-btn">
-                  Free Consumable
+                <Button variant="outline" className="credits-btn" asChild>
+                  <Link href="/">Free Consumable</Link>
                 </Button>
               ) : (
                 <SignedIn>
