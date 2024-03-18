@@ -39,7 +39,7 @@ export const Sidebar = () => {
                       "sidebar-nav_element group",
                       isActive
                         ? "bg-purple-gradient text-white"
-                        : "text-gray-700"
+                        : "text-gray-700",
                     )}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -68,7 +68,7 @@ export const Sidebar = () => {
                       "sidebar-nav_element group",
                       isActive
                         ? "bg-purple-gradient text-white"
-                        : "text-gray-700"
+                        : "text-gray-700",
                     )}
                   >
                     <Link className="sidebar-link" href={link.route}>

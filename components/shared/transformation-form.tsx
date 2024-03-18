@@ -142,7 +142,7 @@ export const TransformationForm = ({
 
   const onSelectFieldHandler = (
     value: string,
-    onChangeField: (value: string) => void
+    onChangeField: (value: string) => void,
   ) => {
     const imageSize = aspectRatioOptions[value as AspectRatioKey];
 
@@ -162,7 +162,7 @@ export const TransformationForm = ({
     fieldName: string,
     value: string,
     type: string,
-    onChangeField: (value: string) => void
+    onChangeField: (value: string) => void,
   ) => {
     debounce(() => {
       setNewTransformation((prevState: any) => ({
@@ -181,7 +181,7 @@ export const TransformationForm = ({
     setIsTransforming(true);
 
     setTransformationConfig(
-      deepMergeObjects(newTransformation, transformationConfig)
+      deepMergeObjects(newTransformation, transformationConfig),
     );
 
     setNewTransformation(null);
@@ -266,7 +266,7 @@ export const TransformationForm = ({
                       "prompt",
                       e.target.value,
                       type,
-                      field.onChange
+                      field.onChange,
                     )
                   }
                   disabled={isSubmitting || isTransforming}
@@ -291,7 +291,7 @@ export const TransformationForm = ({
                         "color",
                         e.target.value,
                         "recolor",
-                        field.onChange
+                        field.onChange,
                       )
                     }
                     disabled={isSubmitting || isTransforming}

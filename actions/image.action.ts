@@ -54,7 +54,7 @@ export async function updateImage({ image, userId, path }: UpdateImageParams) {
     const updatedImage = await Image.findByIdAndUpdate(
       imageToUpdate._id,
       image,
-      { new: true }
+      { new: true },
     );
 
     revalidatePath(path);

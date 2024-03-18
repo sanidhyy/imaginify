@@ -48,7 +48,7 @@ const toBase64 = (str: string) =>
     : window.btoa(str);
 
 export const dataUrl = `data:image/svg+xml;base64,${toBase64(
-  shimmer(1000, 1000)
+  shimmer(1000, 1000),
 )}`;
 // ==== End
 
@@ -78,7 +78,7 @@ export function removeKeysFromQuery({
 
   // Remove null or undefined values
   Object.keys(currentUrl).forEach(
-    (key) => currentUrl[key] == null && delete currentUrl[key]
+    (key) => currentUrl[key] == null && delete currentUrl[key],
   );
 
   return `${window.location.pathname}?${qs.stringify(currentUrl)}`;
@@ -98,7 +98,7 @@ export type AspectRatioKey = keyof typeof aspectRatioOptions;
 export const getImageSize = (
   type: string,
   image: any,
-  dimension: "width" | "height"
+  dimension: "width" | "height",
 ): number => {
   if (type === "fill") {
     return (

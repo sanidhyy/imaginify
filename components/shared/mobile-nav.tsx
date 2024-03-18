@@ -58,7 +58,7 @@ export const MobileNav = () => {
                         key={link.route}
                         className={cn(
                           "p-18 flex whitespace-nowrap text-dark-700",
-                          isActive && "gradient-text"
+                          isActive && "gradient-text",
                         )}
                       >
                         <Link href={link.route}>{link.label}</Link>

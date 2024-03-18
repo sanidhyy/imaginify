@@ -16,7 +16,7 @@ export const TransformedImage = ({
   hasDownload = false,
 }: TransformedImageProps) => {
   const downloadHandler = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ export const TransformedImage = ({
         src: image?.publicId,
         ...transformationConfig,
       }),
-      title
+      title,
     );
   };
 
