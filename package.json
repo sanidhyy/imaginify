@@ -198,7 +198,7 @@
     "clsx": "^2.1.0",
     "lucide-react": "^0.357.0",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.2.1",
+    "mongoose": "^8.8.3",
     "next": "14.2.13",
     "next-cloudinary": "^6.3.0",
     "qs": "^6.12.0",
