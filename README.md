@@ -44,7 +44,6 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 imaginify/
   |- actions/
@@ -53,24 +52,8 @@ imaginify/
     |-- user.action.ts
   |- app/
     |-- (auth)/
-        |--- sign-in/[[...sign-in]]/
-        |--- sign-up/[[...sign-up]]/
-        |--- layout.tsx
     |-- (root)/
-        |--- credits/
-        |--- profile/
-        |--- transformations/
-            |---- [id]/
-                |----- update/
-                |----- page.tsx
-            |---- add/
-            |---- layout.tsx
-            |---- page.tsx
-        |--- layout.tsx
-        |--- page.tsx
-    |-- api/webhooks/
-        |--- clerk/
-        |--- stripe/
+    |-- api/
     |-- apple-icon.png
     |-- favicon.ico
     |-- globals.css
@@ -91,19 +74,18 @@ imaginify/
     |-- image.model.ts
     |-- transaction.model.ts
     |-- user.model.ts
-  |- public/assets/
-    |-- icons/
-    |-- images/
+  |- public/
   |- types/
     |-- index.d.ts
   |- .env.example
-  |- .env.local
+  |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
   |- .vercelignore
   |- components.json
   |- environment.d.ts
   |- middleware.ts
+  |- netlify.toml
   |- next.config.mjs
   |- package-lock.json
   |- package.json
@@ -111,7 +93,6 @@ imaginify/
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -244,8 +225,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Imaginify.
 
 <!--- DEPENDENCIES_START --->
-
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.29.9
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.5
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.3.4
 - [@radix-ui/react-alert-dialog](https://www.npmjs.com/package/@radix-ui/react-alert-dialog): ^1.0.5
 - [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.0.5
@@ -254,14 +234,21 @@ Useful resources and dependencies that are used in Imaginify.
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.0.2
 - [@radix-ui/react-toast](https://www.npmjs.com/package/@radix-ui/react-toast): ^1.1.5
 - [@stripe/stripe-js](https://www.npmjs.com/package/@stripe/stripe-js): ^3.0.10
+- [@types/node](https://www.npmjs.com/package/@types/node): ^20
+- [@types/react](https://www.npmjs.com/package/@types/react): ^18
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.0
 - [cloudinary](https://www.npmjs.com/package/cloudinary): ^2.0.3
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
+- [eslint](https://www.npmjs.com/package/eslint): ^8
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.1.3
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.357.0
 - [mongodb](https://www.npmjs.com/package/mongodb): ^6.5.0
 - [mongoose](https://www.npmjs.com/package/mongoose): ^8.2.1
-- [next](https://www.npmjs.com/package/next): 14.1.3
+- [next](https://www.npmjs.com/package/next): 14.2.21
 - [next-cloudinary](https://www.npmjs.com/package/next-cloudinary): ^6.3.0
+- [postcss](https://www.npmjs.com/package/postcss): ^8
 - [qs](https://www.npmjs.com/package/qs): ^6.12.0
 - [react](https://www.npmjs.com/package/react): ^18
 - [react-dom](https://www.npmjs.com/package/react-dom): ^18
@@ -269,8 +256,11 @@ Useful resources and dependencies that are used in Imaginify.
 - [stripe](https://www.npmjs.com/package/stripe): ^14.21.0
 - [svix](https://www.npmjs.com/package/svix): ^1.21.0
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.1
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [typescript](https://www.npmjs.com/package/typescript): ^5
 - [zod](https://www.npmjs.com/package/zod): ^3.22.4
+
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
