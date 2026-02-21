@@ -43,6 +43,8 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 imaginify/
   |- actions/
@@ -110,6 +112,8 @@ imaginify/
   |- tsconfig.json
 ```
 
+<!--- FOLDER_STRUCTURE_END --->
+
 <br />
 
 ## :toolbox: Getting Started
@@ -157,7 +161,6 @@ NEXT_PUBLIC_SERVER_URL=http://localhost:3000
 ```
 
 5. **Clerk Auth Keys**:
-
    - Go to the Clerk Dashboard (https://dashboard.clerk.dev/).
    - Log in to your account.
    - Navigate to the project you're working on.
@@ -168,7 +171,6 @@ NEXT_PUBLIC_SERVER_URL=http://localhost:3000
    - Copy these keys into your `.env.local` file.
 
 6. **Clerk Redirect URLs**:
-
    - These are typically configured within your Clerk Dashboard or during project setup.
    - Ensure that the following URLs are configured correctly:
      - `NEXT_PUBLIC_CLERK_SIGN_IN_URL`
@@ -178,14 +180,12 @@ NEXT_PUBLIC_SERVER_URL=http://localhost:3000
    - Copy these URLs into your `.env.local` file.
 
 7. **Clerk Webhook Secret**:
-
    - Navigate to the Clerk Dashboard.
    - Find the section for webhooks or integrations.
    - Generate a webhook secret or locate an existing one.
    - Copy the webhook secret (`WEBHOOK_SECRET`) into your `.env.local` file.
 
 8. **MongoDB URL**:
-
    - Log in to your MongoDB Atlas account (https://www.mongodb.com/cloud/atlas).
    - Navigate to your project or cluster.
    - Locate the connection string.
@@ -193,7 +193,6 @@ NEXT_PUBLIC_SERVER_URL=http://localhost:3000
    - Copy the MongoDB URL (`MONGODB_URL`) into your `.env.local` file.
 
 9. **Cloudinary**:
-
    - Log in to your Cloudinary account (https://cloudinary.com/console).
    - Navigate to your account settings or dashboard.
    - Find or generate the Cloudinary API key and API secret.
@@ -244,6 +243,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in Imaginify.
 
+<!--- DEPENDENCIES_START --->
+
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.29.9
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.3.4
 - [@radix-ui/react-alert-dialog](https://www.npmjs.com/package/@radix-ui/react-alert-dialog): ^1.0.5
@@ -270,6 +271,7 @@ Useful resources and dependencies that are used in Imaginify.
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.1
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
 - [zod](https://www.npmjs.com/package/zod): ^3.22.4
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
