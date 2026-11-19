@@ -45,6 +45,7 @@ export const Checkout = ({
         className: "error-toast",
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onCheckout = async () => {
