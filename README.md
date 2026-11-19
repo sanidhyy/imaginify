@@ -252,7 +252,7 @@ Useful resources and dependencies that are used in Imaginify.
 - [eslint](https://www.npmjs.com/package/eslint): ^8
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.1.3
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.357.0
-- [mongodb](https://www.npmjs.com/package/mongodb): ^6.5.0
+- [mongodb](https://www.npmjs.com/package/mongodb): ^7.9.0
 - [mongoose](https://www.npmjs.com/package/mongoose): ^8.2.1
 - [next](https://www.npmjs.com/package/next): 14.2.21
 - [next-cloudinary](https://www.npmjs.com/package/next-cloudinary): ^6.3.0
