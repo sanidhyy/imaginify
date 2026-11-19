@@ -261,7 +261,7 @@ Useful resources and dependencies that are used in Imaginify.
 - [react](https://www.npmjs.com/package/react): ^18
 - [react-dom](https://www.npmjs.com/package/react-dom): ^18
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.51.0
-- [stripe](https://www.npmjs.com/package/stripe): ^14.21.0
+- [stripe](https://www.npmjs.com/package/stripe): ^23.1.0
 - [svix](https://www.npmjs.com/package/svix): ^1.21.0
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.1
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
