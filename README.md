@@ -44,7 +44,6 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 imaginify/
   |- actions/
@@ -88,13 +87,12 @@ imaginify/
   |- middleware.ts
   |- netlify.toml
   |- next.config.mjs
-  |- package-lock.json
   |- package.json
+  |- pnpm-lock.yaml
   |- postcss.config.js
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -235,7 +233,6 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Imaginify.
 
 <!--- DEPENDENCIES_START --->
-
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.5
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.3.4
 - [@radix-ui/react-alert-dialog](https://www.npmjs.com/package/@radix-ui/react-alert-dialog): ^1.0.5
@@ -246,6 +243,7 @@ Useful resources and dependencies that are used in Imaginify.
 - [@radix-ui/react-toast](https://www.npmjs.com/package/@radix-ui/react-toast): ^1.1.5
 - [@stripe/stripe-js](https://www.npmjs.com/package/@stripe/stripe-js): ^3.0.10
 - [@types/node](https://www.npmjs.com/package/@types/node): ^20
+- [@types/qs](https://www.npmjs.com/package/@types/qs): ^6.15.1
 - [@types/react](https://www.npmjs.com/package/@types/react): ^18
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
